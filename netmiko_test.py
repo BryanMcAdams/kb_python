@@ -29,5 +29,5 @@ device_list = [nxos1, nxos2, ios_xe1]
 #	net_connect.disconnect()
 
 net_connect = ConnectHandler(**ios_xe)
-output = net_connect.send_command("show ip interface brief")
+output = net_connect.send_command("show version")
 print(output)
