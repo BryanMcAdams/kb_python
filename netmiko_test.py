@@ -13,6 +13,10 @@ device2 = {
     "password": '88newclass',
     "device_type": "cisco_nxos",
 }
-net_connect = ConnectHandler(**device1)
-print(net_connect.find_prompt())
-net_connect.disconnect()
+
+device_list = ['device1', 'device2']
+
+for device in device_list:
+	net_connect = ConnectHandler(device)
+	print(net_connect.find_prompt())
+	net_connect.disconnect()
