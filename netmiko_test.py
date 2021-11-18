@@ -17,6 +17,6 @@ device2 = {
 device_list = ['device1', 'device2']
 
 for device in device_list:
-	net_connect = ConnectHandler(device)
+	net_connect = ConnectHandler(**device)
 	print(net_connect.find_prompt())
 	net_connect.disconnect()
