@@ -30,4 +30,11 @@ device_list = [nxos1, nxos2, ios_xe1]
 
 net_connect = ConnectHandler(**ios_xe1)
 output = net_connect.send_command("show version")
-print(output)
+
+with open("show_version.txt", "w") as f:
+    f.write(output)
+
+net_connect.disconnect()
+
+
+
