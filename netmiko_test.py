@@ -14,7 +14,7 @@ device2 = {
     "device_type": "cisco_nxos",
 }
 
-device_list = ['device1', 'device2']
+device_list = [device1, device2]
 
 for device in device_list:
 	net_connect = ConnectHandler(**device)
