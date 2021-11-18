@@ -28,6 +28,6 @@ device_list = [nxos1, nxos2, ios_xe1]
 #	print(net_connect.find_prompt())
 #	net_connect.disconnect()
 
-net_connect = ConnectHandler(**ios_xe)
+net_connect = ConnectHandler(**ios_xe1)
 output = net_connect.send_command("show version")
 print(output)
